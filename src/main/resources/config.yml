@@ -1,0 +1,16 @@
+# The token for the bot
+token: "TOKEN_HERE"
+
+# Prefix for all commands
+prefix: "!"
+# Roles which can use the commands
+adminRoles:
+  - ROLE_ID_HERE
+  - ITS_A_LIST_SO_YOU
+  - CAN_HAVE_AS_MANY_AS
+  - YOU_WANT!
+
+# Status to display when the bot is online
+status: "War Against Urguan"
+# Color for all embeds
+embedColor: "#FF5733"
