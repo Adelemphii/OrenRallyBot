@@ -10,6 +10,7 @@ public class Configuration {
     String token;
     String prefix;
     List<Long> adminRoles;
+    List<Long> dmRoles;
 
     String status;
     String embedColor;
@@ -24,6 +25,10 @@ public class Configuration {
 
     public List<Long> getAdminRoles() {
         return adminRoles;
+    }
+
+    public List<Long> getDmRoles() {
+        return dmRoles;
     }
 
     public String getStatus() {

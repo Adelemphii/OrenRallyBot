@@ -15,7 +15,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CommandHandler extends ListenerAdapter {
+public class WarclaimMessageCommand extends ListenerAdapter {
 
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
@@ -88,7 +88,7 @@ public class CommandHandler extends ListenerAdapter {
             // get every member with a specific role and dm the embed to them
             List<List<Member>> members = new ArrayList<>();
 
-            for (Long roleID : Main.config.getAdminRoles()) {
+            for (Long roleID : Main.config.getDmRoles()) {
                 String roleIDString = String.valueOf(roleID);
 
                 List<Member> memberList = event.getGuild().getMembersWithRoles(event.getGuild().getRoleById(roleIDString));
@@ -97,9 +97,7 @@ public class CommandHandler extends ListenerAdapter {
 
             for (List<Member> members1 : members) {
                 for (Member member : members1) {
-                    member.getUser().openPrivateChannel().queue(msg -> {
-                        msg.sendMessageEmbeds(embed.build()).queue();
-                    });
+                    member.getUser().openPrivateChannel().queue(msg -> msg.sendMessageEmbeds(embed.build()).queue());
                 }
             }
         } else {

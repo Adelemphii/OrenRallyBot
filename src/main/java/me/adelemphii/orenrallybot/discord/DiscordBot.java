@@ -1,7 +1,7 @@
 package me.adelemphii.orenrallybot.discord;
 
 import me.adelemphii.orenrallybot.Main;
-import me.adelemphii.orenrallybot.commands.CommandHandler;
+import me.adelemphii.orenrallybot.commands.WarclaimMessageCommand;
 import me.adelemphii.orenrallybot.discord.listeners.LogMessagesToConsole;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -51,6 +51,6 @@ public class DiscordBot {
 
     private void registerEvents() {
         jda.addEventListener(new LogMessagesToConsole());
-        jda.addEventListener(new CommandHandler());
+        jda.addEventListener(new WarclaimMessageCommand());
     }
 }

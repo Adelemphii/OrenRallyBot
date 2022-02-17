@@ -35,6 +35,7 @@ public class Main {
 
         logger.info("Starting bot..");
         discordBot = new DiscordBot();
+        logger.info("Use Ctrl+C to exit.");
 
         // shutdown hook
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
@@ -48,7 +49,7 @@ public class Main {
         try {
             // The commented out area is for when testing in intellij
             //ClassLoader loader = Thread.currentThread().getContextClassLoader();
-            //InputStream is = loader.getResourceAsStream("config.yml");
+            //InputStream is = loader.getResourceAsStream("exampleConfig.yml");
             InputStream is = new FileInputStream("config.yml");
 
             ObjectMapper mapper = new ObjectMapper(new YAMLFactory());

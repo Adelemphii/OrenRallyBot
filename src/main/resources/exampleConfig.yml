@@ -9,6 +9,12 @@ adminRoles:
   - ITS_A_LIST_SO_YOU
   - CAN_HAVE_AS_MANY_AS
   - YOU_WANT!
+# Roles which will receive the message in DMs
+dmRoles:
+  - ROLE_ID_HERE
+  - ITS_A_LIST_SO_YOU
+  - CAN_HAVE_AS_MANY_AS
+  - YOU_WANT!
 
 # Status to display when the bot is online
 status: "War Against Urguan"
